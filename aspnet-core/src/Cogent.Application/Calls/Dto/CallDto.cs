@@ -18,6 +18,6 @@ namespace Cogent.Calls.Dto
         [StringLength(Call.MaxDescriptionLength)]
         public string Description { get; set; }
 
-        public int? UserId { get; set; }
+        public long? UserId { get; set; }
     }
 }

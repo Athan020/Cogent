@@ -4,14 +4,16 @@ using Cogent.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cogent.Migrations
 {
     [DbContext(typeof(CogentDbContext))]
-    partial class CogentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181205093744_Add-Callv3")]
+    partial class AddCallv3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1015,7 +1017,8 @@ namespace Cogent.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Callnumber")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<string>("Description")
                         .HasMaxLength(16384);

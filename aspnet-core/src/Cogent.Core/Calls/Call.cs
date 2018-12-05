@@ -15,20 +15,21 @@ namespace Cogent.Calls
         public const int MaxDescriptionLength = 16 * 1024;
 
         [Required]
-        [MaxLength(10)]
+        [MinLength(10)]
         public  string Callnumber { get; set; }
 
         [StringLength(MaxDescriptionLength)]
         public  string Description { get; set; }
 
         [ForeignKey(nameof(UserId))]
-        public int UserId { get; set; }
+        public User User { get; set; }
+        public long UserId { get; set; }
 
         public Call()
         {
 
         }
-        public Call(string callnumber, int userId, string description = null)
+        public Call(string callnumber, long userId, string description = null)
         {
             Callnumber = callnumber;
             Description = description;

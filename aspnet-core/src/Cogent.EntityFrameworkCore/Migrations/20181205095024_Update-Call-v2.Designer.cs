@@ -4,14 +4,16 @@ using Cogent.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cogent.Migrations
 {
     [DbContext(typeof(CogentDbContext))]
-    partial class CogentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181205095024_Update-Call-v2")]
+    partial class UpdateCallv2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

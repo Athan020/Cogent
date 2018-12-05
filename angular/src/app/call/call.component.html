@@ -26,6 +26,7 @@
                         <tr>
                             <th>{{l("Call Number")}}</th>
                             <th>{{l("Description")}}</th>
+                            <th>{{l("UserId")}}</th>
                             <th>{{l('Actions')}}</th>
                         </tr>
                     </thead>
@@ -33,6 +34,7 @@
                         <tr *ngFor="let call of calls | paginate: { id: 'server', itemsPerPage: pageSize, currentPage: pageNumber, totalItems: totalItems }">
                             <td>{{call.callNumber}}</td>
                             <td>{{call.description}}</td>
+                            <td>{{call.userId}}</td>
                            
                             <td class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"

@@ -36,6 +36,7 @@ export class EditCallComponent extends AppComponentBase{
             }))
             .subscribe((result: CallDto) => {
                 this.call = result;
+            
             });
     }
 
